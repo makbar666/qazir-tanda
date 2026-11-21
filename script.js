@@ -22,6 +22,57 @@ if (!reducedMotion.matches && 'IntersectionObserver' in window) {
 }
 if (document.startViewTransition) document.documentElement.classList.add('has-view-transitions');
 
+const heroVisual = document.querySelector('.hero-visual');
+const heroScenes = Array.from(document.querySelectorAll('[data-hero-scene]'));
+const heroButtons = Array.from(document.querySelectorAll('[data-hero-button]'));
+const heroNav = Array.from(document.querySelectorAll('[data-hero-nav]'));
+let heroSceneIndex = 0;
+let heroSwitching = false;
+let heroHovered = false;
+let heroInView = true;
+let heroTimer;
+
+function changeHeroScene(nextIndex) {
+  if (heroSwitching || nextIndex === heroSceneIndex) return;
+  heroSwitching = true;
+  const outgoing = heroScenes[heroSceneIndex];
+  const incoming = heroScenes[nextIndex];
+  if (!reducedMotion.matches) outgoing.classList.add('is-leaving');
+  window.setTimeout(() => {
+    outgoing.hidden = true;
+    outgoing.classList.remove('is-leaving');
+    incoming.hidden = false;
+    if (!reducedMotion.matches) incoming.classList.add('is-entering');
+    heroSceneIndex = nextIndex;
+    heroVisual.dataset.activeScene = incoming.dataset.heroScene;
+    heroButtons.forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.heroButton === incoming.dataset.heroScene)));
+    heroNav.forEach((item) => item.classList.toggle('app-side-active', item.dataset.heroNav === incoming.dataset.heroScene));
+    window.setTimeout(() => incoming.classList.remove('is-entering'), 300);
+    heroSwitching = false;
+  }, reducedMotion.matches ? 0 : 160);
+}
+
+function startHeroRotation() {
+  window.clearInterval(heroTimer);
+  if (reducedMotion.matches) return;
+  heroTimer = window.setInterval(() => {
+    if (!heroInView || heroHovered || heroVisual.contains(document.activeElement) || document.hidden) return;
+    changeHeroScene((heroSceneIndex + 1) % heroScenes.length);
+  }, 5200);
+}
+
+heroButtons.forEach((button, index) => button.addEventListener('click', () => {
+  changeHeroScene(index);
+  startHeroRotation();
+}));
+heroVisual.addEventListener('mouseenter', () => { heroHovered = true; });
+heroVisual.addEventListener('mouseleave', () => { heroHovered = false; });
+if ('IntersectionObserver' in window) {
+  new IntersectionObserver(([entry]) => { heroInView = entry.isIntersecting; }, { threshold: .15 }).observe(heroVisual);
+}
+reducedMotion.addEventListener('change', startHeroRotation);
+startHeroRotation();
+
 menuButton?.addEventListener('click', () => {
   const open = menuButton.getAttribute('aria-expanded') !== 'true';
   menuButton.setAttribute('aria-expanded', String(open));

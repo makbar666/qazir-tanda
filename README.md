@@ -29,3 +29,5 @@ Teks fitur merujuk ke README dan implementasi di `../sistem-kasir` (Qazir) serta
 Form demo bekerja sepenuhnya di browser. Tombol **Lanjutkan via WhatsApp** membuka percakapan ke 085254099133 dengan pesan yang terisi dari formulir. Pengunjung tetap menekan Kirim sendiri di WhatsApp. Halaman tidak menyimpan isi formulir ke server.
 
 Animasi memakai CSS dan JavaScript bawaan browser: bagian halaman muncul saat digulir, tab contoh layar berpindah dengan transisi singkat, dan menu ponsel membuka dengan fade/blur. Pengaturan sistem `prefers-reduced-motion` menonaktifkan gerakan dan blur transisi.
+
+Ilustrasi hero berganti otomatis antara kasir dan poin, pembayaran QRIS, serta ringkasan multi outlet. Tombol angka di atas ilustrasi dapat memilih tampilan secara manual. Pergantian otomatis berhenti saat ilustrasi tidak terlihat, saat kursor berada di atasnya, saat kontrolnya mendapat fokus, dan saat reduced motion aktif.

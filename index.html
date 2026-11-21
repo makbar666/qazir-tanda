@@ -49,20 +49,32 @@
           <div class="hero-proof"><span>QRIS dinamis</span><span>Multi outlet</span><span>Member & poin</span></div>
         </div>
 
-        <div class="hero-visual" role="img" aria-label="Ilustrasi Qazir dengan pilihan tiga outlet dan pembayaran QRIS dinamis, terhubung dengan poin member Tanda">
-          <div class="preview-caption">ILUSTRASI ALUR PRODUK <span>01 / 02</span></div>
+        <div class="hero-visual" data-active-scene="kasir">
+          <div class="preview-caption"><span>ILUSTRASI FITUR PRODUK</span><div class="hero-scene-switcher" role="group" aria-label="Pilih ilustrasi fitur"><button type="button" data-hero-button="kasir" aria-label="Tampilkan kasir dan poin" aria-pressed="true">01</button><button type="button" data-hero-button="qris" aria-label="Tampilkan pembayaran QRIS" aria-pressed="false">02</button><button type="button" data-hero-button="outlet" aria-label="Tampilkan multi outlet" aria-pressed="false">03</button></div></div>
           <div class="app-frame app-frame-qazir" aria-hidden="true">
             <div class="app-frame-head"><span class="app-mark">Q</span><strong>qazir.</strong><span class="app-frame-head-sep"></span><span>Ruang kerja kasir</span><span class="app-frame-head-user">3 outlet</span></div>
             <div class="app-frame-body">
-              <div class="app-side"><span class="app-side-active">▥ <b>Kasir</b></span><span>▤ <b>Produk & stok</b></span><span>≡ <b>Penjualan</b></span><span>⇄ <b>Integrasi</b></span></div>
+              <div class="app-side"><span class="app-side-active" data-hero-nav="kasir">▥ <b>Kasir</b></span><span data-hero-nav="qris">▦ <b>QRIS Midtrans</b></span><span data-hero-nav="outlet">⌂ <b>Outlet</b></span><span>⇄ <b>Integrasi</b></span></div>
               <div class="app-work">
-                <div class="app-work-title"><div><small>TRANSAKSI BARU</small><strong>Kasir</strong></div><span class="app-work-badge">Shift terbuka</span></div>
-                <div class="app-outlet"><span>OUTLET AKTIF</span><strong>Outlet Utama <span aria-hidden="true">⌄</span></strong><small>1 dari 3 cabang</small></div>
-                <div class="app-payment-method"><span class="app-payment-icon" aria-hidden="true">▦</span><span><small>METODE PEMBAYARAN</small><strong>QRIS dinamis</strong></span><b>Midtrans</b></div>
-                <div class="app-search">Cari produk atau SKU <span>⌕</span></div>
-                <div class="app-items"><div><span>Kopi Aren<small>SKU 001</small></span><b>1 × Rp13.000</b></div><div><span>Kopi Susu<small>SKU 002</small></span><b>2 × Rp13.000</b></div></div>
-                <div class="app-total"><span>Total pembayaran</span><strong>Rp39.000</strong></div>
-                <div class="app-pay">Catat pembayaran</div>
+                <div class="hero-scene" data-hero-scene="kasir">
+                  <div class="app-work-title"><div><small>TRANSAKSI BARU</small><strong>Kasir</strong></div><span class="app-work-badge">Shift terbuka</span></div>
+                  <div class="app-search">Cari produk atau SKU <span>⌕</span></div>
+                  <div class="app-items"><div><span>Kopi Aren<small>SKU 001</small></span><b>1 × Rp13.000</b></div><div><span>Kopi Susu<small>SKU 002</small></span><b>2 × Rp13.000</b></div></div>
+                  <div class="app-total"><span>Total pembayaran</span><strong>Rp39.000</strong></div>
+                  <div class="app-pay">Catat pembayaran</div>
+                </div>
+                <div class="hero-scene" data-hero-scene="qris" hidden>
+                  <div class="app-work-title"><div><small>PEMBAYARAN DIGITAL</small><strong>QRIS Midtrans</strong></div><span class="app-work-badge">Menunggu bayar</span></div>
+                  <div class="hero-qris-total"><small>TOTAL TAGIHAN</small><strong>Rp39.000</strong><span>POS-261121-001</span></div>
+                  <div class="hero-qris-detail"><div class="hero-qr" aria-hidden="true"><i></i><i></i><i></i></div><div><strong>Pindai untuk membayar</strong><span>QRIS dinamis dibuat untuk tiap transaksi.</span><small>Status pembayaran diperbarui otomatis</small></div></div>
+                  <div class="hero-qris-status"><span></span>Menunggu pembayaran dari pelanggan</div>
+                </div>
+                <div class="hero-scene" data-hero-scene="outlet" hidden>
+                  <div class="app-work-title"><div><small>MULTI OUTLET</small><strong>Ringkasan cabang</strong></div><span class="app-work-badge">3 aktif</span></div>
+                  <div class="hero-outlet-total"><small>PENJUALAN HARI INI · SEMUA CABANG</small><strong>Rp2.480.000</strong></div>
+                  <div class="hero-outlet-list"><div><span><b>Outlet Utama</b><small>Stok terpantau</small></span><strong>Rp1.120.000</strong></div><div><span><b>Cabang Selatan</b><small>Stok terpantau</small></span><strong>Rp780.000</strong></div><div><span><b>Cabang Timur</b><small>Stok terpantau</small></span><strong>Rp580.000</strong></div></div>
+                  <div class="hero-outlet-foot">Penjualan dan stok per cabang <strong>3 / 3 sinkron</strong></div>
+                </div>
               </div>
             </div>
           </div>
@@ -70,6 +82,8 @@
             <div class="tanda-mini-head"><span class="tanda-mini-mark">T</span><strong>tanda.</strong><span>Member terhubung</span></div>
             <div class="tanda-mini-body"><span>MEMBER TOKO</span><strong>Akbar</strong><small>Saldo tersedia</small><div><b>120</b> poin</div><p>Transaksi ini berpotensi menambah poin setelah pembayaran lunas.</p></div>
           </div>
+          <div class="app-frame app-frame-feature app-frame-feature-qris" aria-hidden="true"><small>PEMBAYARAN QRIS</small><strong>Per transaksi, otomatis.</strong><span>Status lunas tercatat setelah konfirmasi Midtrans.</span></div>
+          <div class="app-frame app-frame-feature app-frame-feature-outlet" aria-hidden="true"><small>MULTI OUTLET</small><strong>Tiga cabang terpantau.</strong><span>Penjualan dan stok dapat dilihat per outlet.</span></div>
           <p class="visual-disclaimer">Contoh tampilan dan data ilustratif. Keduanya dapat berjalan terpisah.</p>
         </div>
       </div>
