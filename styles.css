@@ -209,6 +209,20 @@ img,svg{display:block;max-width:100%}
 .option-row p{max-width:500px;margin:0;color:#64766a;font-size:15px;line-height:1.6}
 .choose-button{padding:8px 0;border:0;background:none;color:#245c43;white-space:nowrap}
 .implementation-note{margin:20px 0 0;color:#6b7d70;font-size:13px;line-height:1.6}
+.pricing-section{padding:96px 0;background:#fff;border-top:1px solid #dce5db}
+.pricing-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(360px,.9fr);gap:8%;align-items:start}
+.pricing-heading h2{margin:18px 0 20px;font-size:clamp(38px,4.3vw,58px);font-weight:650;line-height:1.1;letter-spacing:-.06em}
+.pricing-heading>p:last-child{max-width:510px;margin:0;color:#65756a;font-size:16px;line-height:1.7}
+.pricing-sheet{border-top:2px solid #214936;border-bottom:1px solid #dce5db}
+.pricing-main{padding:21px 0 24px;border-bottom:1px solid #dce5db}
+.pricing-main>span{color:#5c7b64;font-size:11px;font-weight:760;letter-spacing:.13em}
+.pricing-main>div{display:flex;align-items:baseline;gap:10px;margin-top:7px}
+.pricing-main strong{font-size:clamp(40px,4.5vw,58px);font-weight:680;letter-spacing:-.07em;line-height:1.1}
+.pricing-main small{color:#6b7d70;font-size:15px}
+.pricing-sheet dl{margin:0}.pricing-sheet dl>div{display:flex;justify-content:space-between;gap:18px;padding:14px 0;border-bottom:1px solid #e8eee6;font-size:14px}.pricing-sheet dl>div:last-child{border-bottom:0}
+.pricing-sheet dt{color:#506657}.pricing-sheet dd{margin:0;color:#275b3d;font-weight:720}
+.pricing-cta{width:100%;margin:13px 0 20px;padding:12px 16px;border:1px solid #28583e;border-radius:3px;background:#214936;color:#fff;font-size:14px;font-weight:700;transition:background .16s var(--ease),transform .13s var(--ease)}
+.pricing-cta:hover{background:#306246;transform:translateY(-2px)}.pricing-cta:active{transform:translateY(0)}
 .closing{background:#173629;color:#f4f8f1;padding:100px 0 108px}
 .closing-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(345px,.82fr);gap:12%;align-items:start}
 .closing h2{margin:18px 0 20px;font-size:clamp(38px,4.15vw,59px);font-weight:640;line-height:1.1;letter-spacing:-.065em}
@@ -228,4 +242,6 @@ img,svg{display:block;max-width:100%}
 @media(max-width:680px){.hero-visual{padding-bottom:130px}.app-frame-tanda,.app-frame-feature{bottom:42px}.app-frame-feature{width:220px;padding:14px 16px}.hero-qris-total{margin-top:12px;padding:9px 11px}.hero-qris-total strong{font-size:18px}.hero-qris-detail{gap:10px;margin-top:8px;padding:9px}.hero-qr{width:70px;height:70px}.hero-qr i{width:20px;height:20px;border-width:4px;box-shadow:inset 0 0 0 4px #254833}.hero-qris-detail strong{font-size:11px}.hero-qris-detail span{font-size:9px}.hero-qris-detail small{font-size:8px}.hero-qris-status{margin-top:8px;font-size:9px}.hero-outlet-total{gap:0;margin-top:12px;padding:8px 10px}.hero-outlet-total strong{font-size:20px}.hero-outlet-list{margin-top:7px}.hero-outlet-list>div{padding:6px 9px}.hero-outlet-list small{display:none}.hero-outlet-foot{margin-top:7px;font-size:9px}}
 @media(max-width:680px){.hero-scene[data-hero-scene="kasir"] .app-search{margin-top:7px}.hero-scene[data-hero-scene="kasir"] .app-items>div{padding:7px 9px}.hero-scene[data-hero-scene="kasir"] .app-total{margin-top:8px;padding-top:7px}.hero-scene[data-hero-scene="kasir"] .app-pay{margin-top:6px;padding:6px}}
 @media(max-width:390px){.hero h1{font-size:41px}.app-frame-head-user,.app-frame-head-sep{display:none}.app-work-badge{display:none}.app-side b{display:none}.app-frame-body{grid-template-columns:36px 1fr}.app-frame-qazir{height:334px}.app-frame-tanda,.app-frame-feature{width:190px}.mock-side span{font-size:0}.mock-side b{font-size:13px}}
+@media(max-width:900px){.pricing-grid{grid-template-columns:1fr;gap:35px}.pricing-sheet{max-width:580px}}
+@media(max-width:680px){.pricing-section{padding:70px 0}.pricing-heading h2{font-size:clamp(36px,9vw,49px)}.pricing-main strong{font-size:44px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}.motion-enabled .reveal-on-scroll{opacity:1!important;transform:none!important;filter:none!important}}

@@ -3,7 +3,7 @@ const nav = document.querySelector('.primary-nav');
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
 const revealTargets = Array.from(document.querySelectorAll(
-  '.solutions > .shell, .workflow > .shell, .preview-section > .shell, .choose-section > .shell, .closing-grid',
+  '.solutions > .shell, .workflow > .shell, .preview-section > .shell, .choose-section > .shell, .pricing-section > .shell, .closing-grid',
 ));
 if (!reducedMotion.matches && 'IntersectionObserver' in window) {
   revealTargets.forEach((target) => {

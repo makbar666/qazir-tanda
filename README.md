@@ -26,6 +26,8 @@ Tidak ada `vercel.json` atau `package.json` karena konfigurasi dan proses build 
 
 Teks fitur merujuk ke README dan implementasi di `../sistem-kasir` (Qazir) serta `../sistem-point` (Tanda). Semua angka, nama, dan transaksi pada ilustrasi antarmuka adalah contoh, bukan data produksi. Tidak ada harga, testimoni, atau angka performa yang dikarang.
 
+Harga pada portal mengikuti rincian pemilik produk: paket Qazir + Tanda Rp30.000 per bulan, biaya setup gratis, maintenance standar gratis, dan technical support standar gratis. Harga untuk penggunaan salah satu sistem belum dicantumkan.
+
 Form demo bekerja sepenuhnya di browser. Tombol **Lanjutkan via WhatsApp** membuka percakapan ke 085254099133 dengan pesan yang terisi dari formulir. Pengunjung tetap menekan Kirim sendiri di WhatsApp. Halaman tidak menyimpan isi formulir ke server.
 
 Animasi memakai CSS dan JavaScript bawaan browser: bagian halaman muncul saat digulir, tab contoh layar berpindah dengan transisi singkat, dan menu ponsel membuka dengan fade/blur. Pengaturan sistem `prefers-reduced-motion` menonaktifkan gerakan dan blur transisi.
